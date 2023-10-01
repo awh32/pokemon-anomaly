@@ -310,6 +310,35 @@ class Battle
     when :Psychic
       pbDisplay(_INTL("The battlefield is weird!"))
     end
+    # Anomaly announcement
+    #TODO: determine these bool dynamically
+    isAnomaly = true
+    if isAnomaly
+      #TODO: display anomaly animation
+      #Does the text need to be paused?
+      pbDisplayPaused(_INTL("Opposing GETNAME is an anomaly!"))
+      #TODO: determine these bool dynamically
+      anomalyType = false
+      anomalyAbility = true
+      anomalyMove = false
+      if anomalyType
+        pbDisplayPaused(_INTL("Opposing GETNAME has an anomalous type!"))
+        #TODO: change type
+        #TODO: source from random type
+      end
+      if anomalyAbility
+        pbDisplayPaused(_INTL("Opposing GETNAME has an anomalous ability!"))
+        @battlers.last.ability = :DROUGHT
+        #TODO: source from random ability list
+      end
+      if anomalyMove
+        pbDisplayPaused(_INTL("Opposing GETNAME has an anomalous move!"))
+        #TODO: change a pokemon's move
+        #TODO: source from random move list
+      end
+      #TODO: verify that change is permanent.
+    end
+
     # Abilities upon entering battle
     pbOnAllBattlersEnteringBattle
     # Main battle loop
