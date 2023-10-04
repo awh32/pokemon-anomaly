@@ -411,7 +411,7 @@ module PluginManager
     Compiler.pbCompilerEachPreppedLine(filename) do |line, line_no|
       # split line up into property name and values
       if !line[/^\s*(\w+)\s*=\s*(.*)$/]
-        raise _INTL("Bad line syntax (expected syntax like XXX=YYY)\n{1}", FileLineData.linereport)
+        raise _INTL("Bad line syntax (expected syntax like XXX=YYY).") + "\n" + FileLineData.linereport
       end
       property = $~[1].upcase
       data = $~[2].split(",")
@@ -555,6 +555,7 @@ module PluginManager
   def self.needCompiling?(order, plugins)
     # fixed actions
     return false if !$DEBUG || FileTest.exist?("Game.rgssad")
+    return true if $full_compile
     return true if !FileTest.exist?("Data/PluginScripts.rxdata")
     Input.update
     return true if Input.press?(Input::SHIFT) || Input.press?(Input::CTRL)

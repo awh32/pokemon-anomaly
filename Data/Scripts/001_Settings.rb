@@ -197,7 +197,8 @@ module Settings
   end
   # The maximum number of slots per pocket (-1 means infinite number).
   BAG_MAX_POCKET_SIZE  = [-1, -1, -1, -1, -1, -1, -1, -1]
-  # Whether each pocket in turn auto-sorts itself by item ID number.
+  # Whether each pocket in turn auto-sorts itself by the order items are defined
+  # in the PBS file items.txt.
   BAG_POCKET_AUTO_SORT = [false, false, false, true, true, false, false, false]
   # The maximum number of items each slot in the Bag can hold.
   BAG_MAX_PER_SLOT     = 999
@@ -206,7 +207,7 @@ module Settings
 
   # The number of boxes in Pokémon storage.
   NUM_STORAGE_BOXES   = 40
-  # Whether putting a Pokémon into Pokémon storage will heal it. IF false, they
+  # Whether putting a Pokémon into Pokémon storage will heal it. If false, they
   # are healed by the Recover All: Entire Party event command (at Poké Centers).
   HEAL_STORED_POKEMON = (MECHANICS_GENERATION <= 7)
 
@@ -258,7 +259,6 @@ module Settings
     [0, 51, 16, 15, "hidden_Berth", false],
     [0, 52, 20, 14, "hidden_Faraday", false]
   ]
-
   # Whether the player can use Fly while looking at the Town Map. This is only
   # allowed if the player can use Fly normally.
   CAN_FLY_FROM_TOWN_MAP = true
@@ -294,8 +294,12 @@ module Settings
   #   * Species.
   #   * Level.
   #   * Game Switch; the Pokémon roams while this is ON.
-  #   * Encounter type (0=any, 1=grass/walking in cave, 2=surfing, 3=fishing,
-  #     4=surfing/fishing). See the bottom of PField_RoamingPokemon for lists.
+  #   * Encounter type (see def pbRoamingMethodAllowed for their use):
+  #       0 = grass, walking in cave, surfing
+  #       1 = grass, walking in cave
+  #       2 = surfing
+  #       3 = fishing
+  #       4 = surfing, fishing
   #   * Name of BGM to play for that encounter (optional).
   #   * Roaming areas specifically for this Pokémon (optional).
   ROAMING_SPECIES = [
@@ -452,6 +456,13 @@ module Settings
       "Pizza"
     ]
   end
+
+  #=============================================================================
+
+  # Whether the game will ask you if you want to fully compile every time you
+  # start the game (in Debug mode). You will not need to hold Ctrl/Shift to
+  # compile anything.
+  PROMPT_TO_COMPILE = false
 end
 
 # DO NOT EDIT THESE!
