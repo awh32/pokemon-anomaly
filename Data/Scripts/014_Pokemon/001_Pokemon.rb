@@ -84,6 +84,8 @@ class Pokemon
   attr_accessor :cannot_release
   # Whether this Pokémon can be traded
   attr_accessor :cannot_trade
+  # @return [Boolean] Whether this Pokémon is an anomaly
+  attr_accessor :anomaly
 
   # Max total IVs
   IV_STAT_LIMIT = 31
@@ -1125,6 +1127,18 @@ class Pokemon
     @spdef   = stats[:SPECIAL_DEFENSE]
     @speed   = stats[:SPEED]
   end
+
+  #=============================================================================
+  # Anomaly Status
+  #=============================================================================
+
+  # Returns if the pokemon is anomaly or not
+  def isAnomaly?
+    return @anomaly
+  end
+
+  #TODO: should methods for determining type of anomaly, along with anomaly result live here?
+  #If not, maybe in an anomaly.rb?
 
   #=============================================================================
   # Pokémon creation
