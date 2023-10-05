@@ -612,7 +612,8 @@ module TrainerPokemonProperty
       initsetting[:gender],
       initsetting[:shininess],
       initsetting[:super_shininess],
-      initsetting[:shadowness]
+      initsetting[:shadowness],
+      initsetting[:anomaly]
     ]
     Pokemon::MAX_MOVES.times do |i|
       oldsetting.push((initsetting[:moves]) ? initsetting[:moves][i] : nil)
@@ -634,7 +635,8 @@ module TrainerPokemonProperty
       [_INTL("Gender"),        GenderProperty,                          _INTL("Gender of the Pokémon.")],
       [_INTL("Shiny"),         BooleanProperty2,                        _INTL("If set to true, the Pokémon is a different-colored Pokémon.")],
       [_INTL("SuperShiny"),    BooleanProperty2,                        _INTL("Whether the Pokémon is super shiny (shiny with a special shininess animation).")],
-      [_INTL("Shadow"),        BooleanProperty2,                        _INTL("If set to true, the Pokémon is a Shadow Pokémon.")]
+      [_INTL("Shadow"),        BooleanProperty2,                        _INTL("If set to true, the Pokémon is a Shadow Pokémon.")],
+      [_INTL("Anomaly"),       BooleanProperty2,                        _INTL("If set to true, the Pokémon is an Anomaly Pokémon.")]
     ]
     Pokemon::MAX_MOVES.times do |i|
       pkmn_properties.push([_INTL("Move {1}", i + 1),
@@ -661,18 +663,19 @@ module TrainerPokemonProperty
       :shininess       => oldsetting[5],
       :super_shininess => oldsetting[6],
       :shadowness      => oldsetting[7],
-      :ability         => oldsetting[8 + Pokemon::MAX_MOVES],
-      :ability_index   => oldsetting[9 + Pokemon::MAX_MOVES],
-      :item            => oldsetting[10 + Pokemon::MAX_MOVES],
-      :nature          => oldsetting[11 + Pokemon::MAX_MOVES],
-      :iv              => oldsetting[12 + Pokemon::MAX_MOVES],
-      :ev              => oldsetting[13 + Pokemon::MAX_MOVES],
-      :happiness       => oldsetting[14 + Pokemon::MAX_MOVES],
-      :poke_ball       => oldsetting[15 + Pokemon::MAX_MOVES]
+      :anomaly         => oldsetting[8],
+      :ability         => oldsetting[9 + Pokemon::MAX_MOVES],
+      :ability_index   => oldsetting[10 + Pokemon::MAX_MOVES],
+      :item            => oldsetting[11 + Pokemon::MAX_MOVES],
+      :nature          => oldsetting[12 + Pokemon::MAX_MOVES],
+      :iv              => oldsetting[13 + Pokemon::MAX_MOVES],
+      :ev              => oldsetting[14 + Pokemon::MAX_MOVES],
+      :happiness       => oldsetting[15 + Pokemon::MAX_MOVES],
+      :poke_ball       => oldsetting[16 + Pokemon::MAX_MOVES]
     }
     moves = []
     Pokemon::MAX_MOVES.times do |i|
-      moves.push(oldsetting[8 + i])
+      moves.push(oldsetting[9 + i])
     end
     moves.uniq!
     moves.compact!

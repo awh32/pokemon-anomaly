@@ -1137,8 +1137,67 @@ class Pokemon
     return @anomaly
   end
 
-  #TODO: should methods for determining type of anomaly, along with anomaly result live here?
-  #If not, maybe in an anomaly.rb?
+  def makeAnomaly
+    @anomaly = true
+  end
+
+  # Randomly determine the anomaly parameters and create them.
+  # Static anomalies (event pokemon, trainers, etc) are not handled by this.
+  def anomalize
+    if isAnomaly?
+      # Determine which anomaly parameter(s) we will be using
+      anomalyMove = false
+      anomalyType = false
+      anomalyAbility = false
+      # TODO: Chance for each parameter will be based on skill tree
+      # TODO: look into drying this
+      anomalyRoll = rand(1..100)
+      case anomalyRoll
+      when 1..20
+        anomalyType = true
+      when 21..40
+        anomalyType = true
+      when 41..60
+        anomalyAbility = true
+      when 61..70
+        anomalyMove = true
+        anomalyType = true
+      when 71..80
+        anomalyType = true
+        anomalyAbility = true
+      when 81..90
+        anomalyMove = true
+        anomalyAbility = true
+      when 91..100
+        anomalyMove = true
+        anomalyType = true
+        anomalyAbility = true
+      else 
+        raise _INTL("Invalid result for anomalyRoll = '{1}'.", anomalyRoll)
+      end
+
+      # Use anomaly info to change attributes
+      # TODO: available choices based on skill tree progression
+      if anomalyMove
+        # Warning: this will delete the first known move if necessary
+        # TODO: will this reorder moves? Is that good UX?
+        # TODO: learn based on list of all moves
+        learn_move(:TACKLE)
+      end
+
+      if anomalyType
+        # TODO: putting this one off
+        # type is not stored as an attribute here, its pulled from species definition
+        # will need to update types method to store anomaly type maybe? research needed.
+      end
+
+      if anomalyAbility
+        # TODO: learn based on list of all abilities
+        ability = :DRIZZLE
+      end
+
+    end
+  end
 
   #=============================================================================
   # Pokémon creation

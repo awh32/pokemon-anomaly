@@ -39,6 +39,7 @@ module GameData
       "Shiny"        => [:shininess,       "b"],
       "SuperShiny"   => [:super_shininess, "b"],
       "Shadow"       => [:shadowness,      "b"],
+      "Anomaly"      => [:anomaly,         "b"],
       "Ball"         => [:poke_ball,       "e", :Item]
     }
 
@@ -173,6 +174,9 @@ module GameData
         if pkmn_data[:shadowness]
           pkmn.makeShadow
           pkmn.shiny = false
+        end
+        if pkmn_data[:anomaly]
+          pkmn.makeAnomaly
         end
         pkmn.poke_ball = pkmn_data[:poke_ball] if pkmn_data[:poke_ball]
         pkmn.calc_stats
