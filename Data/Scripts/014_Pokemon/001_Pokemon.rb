@@ -86,6 +86,11 @@ class Pokemon
   attr_accessor :cannot_trade
   # @return [Boolean] Whether this Pokémon is an anomaly
   attr_accessor :anomaly
+  # @return [Array<Symbol>] the anomaly type combo for this pokemon.
+  # Used to retain anomaly typing after type changing
+  attr_accessor :anomalyTypes
+  # @return [Hash<Boolean>] The result of this pokemon's anomaly rolls
+  attr_accessor :anomalyRolls
 
   # Max total IVs
   IV_STAT_LIMIT = 31
@@ -313,7 +318,8 @@ class Pokemon
 
   # @return [Array<Symbol>] an array of this Pokémon's types
   def types
-    return species_data.types.clone
+    return species_data.types.clone unless @anomalyTypes
+    return @anomalyTypes
   end
 
   # @deprecated This method is slated to be removed in v22.
@@ -1176,26 +1182,55 @@ class Pokemon
         raise _INTL("Invalid result for anomalyRoll = '{1}'.", anomalyRoll)
       end
 
+      @anomalyRolls = { "anomalyType" => anomalyType, "anomalyAbility" => anomalyAbility, "anomalyMove" => anomalyMove }
+
       # Use anomaly info to change attributes
       # TODO: available choices based on skill tree progression
+      # TODO: Remove debug messages
       if anomalyMove
         # Warning: this will delete the first known move if necessary
         # TODO: will this reorder moves? Is that good UX?
-        # TODO: learn based on list of all moves
-        learn_move(:TACKLE)
+        # TODO: learn based on research rank pool
+        keys = GameData::Move.keys
+        loop do
+          move_id = keys.sample
+          move = GameData::Move.get(move_id)
+          # Don't anomalize into a move you already know
+          next if self.moves.include?(move)
+          next if ["Struggle"].include?(move.function_code)
+          learn_move(move.id)
+          echoln ("Added anomaly move #{move.id}")
+          break
+        end
       end
 
       if anomalyType
-        # TODO: putting this one off
+        # TODO: extensive testing needed. Likely will reset in scenarios such as roost, tera, etc
         # type is not stored as an attribute here, its pulled from species definition
         # will need to update types method to store anomaly type maybe? research needed.
+        type_keys = GameData::Type.keys
+        current_types = self.types
+        # Don't anomalize into a type you are
+        echoln "current_types = #{current_types} and type_keys = #{type_keys}"
+        type_keys = type_keys - current_types
+        echoln "type_keys after math #{type_keys}"
+        type_id = type_keys.sample
+        current_types[rand(current_types.size - 1)] = type_id
+        @anomalyTypes = current_types
+        echoln("Added anomaly type #{type_id} to result in types #{@anomalyTypes}")
       end
 
       if anomalyAbility
-        # TODO: learn based on list of all abilities
-        ability = :DRIZZLE
+        # TODO: learn based list from research ranks
+        # TODO: Should I disable abilities like zen mode and schooling?
+        ability_keys = GameData::Ability.keys
+        # Don't anomalize into an ability you have
+        ability_keys = ability_keys - [ability_id]
+        @ability = ability_keys.sample
+        echoln("Added anomaly ability #{ability.id}")
       end
-
+    else 
+      _INTL("Tried to anomalize a non-anomaly pokemon.")
     end
   end
 

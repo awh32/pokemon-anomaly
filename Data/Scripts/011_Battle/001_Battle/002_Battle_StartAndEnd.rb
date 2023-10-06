@@ -311,23 +311,25 @@ class Battle
       pbDisplay(_INTL("The battlefield is weird!"))
     end
     # Anomaly announcement
-    isAnomaly = @battlers.last.pokemon.anomaly
+    # TODO: probably an in engine way to grab this or iterate through opponents
+    opposingPokemon = @battlers.last.pokemon
+    isAnomaly = opposingPokemon.anomaly
     if isAnomaly
       #TODO: display anomaly animation
       #Does the text need to be paused?
-      pbDisplayPaused(_INTL("Opposing GETNAME is an anomaly!"))
+      pbDisplayPaused(_INTL("Opposing {1} is an anomaly!", opposingPokemon.species))
       #TODO: determine these bool dynamically
-      anomalyType = false
-      anomalyAbility = true
-      anomalyMove = false
+      anomalyType = opposingPokemon.anomalyRolls["anomalyType"]
+      anomalyAbility = opposingPokemon.anomalyRolls["anomalyAbility"]
+      anomalyMove = opposingPokemon.anomalyRolls["anomalyMove"]
       if anomalyType
-        pbDisplayPaused(_INTL("Opposing GETNAME has an anomalous type!"))
+        pbDisplayPaused(_INTL("Opposing {1} has an anomalous type!", opposingPokemon.species))
       end
       if anomalyAbility
-        pbDisplayPaused(_INTL("Opposing GETNAME has an anomalous ability!"))
+        pbDisplayPaused(_INTL("Opposing {1} has an anomalous ability!", opposingPokemon.species))
       end
       if anomalyMove
-        pbDisplayPaused(_INTL("Opposing GETNAME has an anomalous move!"))
+        pbDisplayPaused(_INTL("Opposing {1} has an anomalous move!", opposingPokemon.species))
       end
       #TODO: verify that change is permanent.
     end
