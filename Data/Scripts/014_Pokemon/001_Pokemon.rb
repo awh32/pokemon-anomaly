@@ -1197,6 +1197,7 @@ class Pokemon
           move = GameData::Move.get(move_id)
           # Don't anomalize into a move you already know
           next if self.moves.include?(move)
+          # Blacklist some moves
           next if ["Struggle"].include?(move.function_code)
           learn_move(move.id)
           echoln ("Added anomaly move #{move.id}")
@@ -1232,6 +1233,17 @@ class Pokemon
     else 
       _INTL("Tried to anomalize a non-anomaly pokemon.")
     end
+  end
+
+  # Return an anomaly pokemon to normal
+  # Does not remove any ability moves
+  def normalize
+    @anomaly = false
+    # This will cause a type recalculation
+    @anomalyTypes = nil
+    @anomalyRolls = nil
+    # Should just be able to nil this and it will get repopulated from ability index
+    @ability = nil
   end
 
   #=============================================================================
