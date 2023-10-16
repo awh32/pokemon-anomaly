@@ -121,3 +121,12 @@ Pokemon = BLASTOISE,63
 LoseText = Huh? But I didn't see an anomaly...
 Pokemon = BULBASAUR,10
     Item = ORANBERRY
+#-------------------------------
+[AROMALADY,Baby Gym]
+LoseText = Oh no, my babies!
+Pokemon = CLEFFA,10
+Pokemon = TOGEPI,10
+Pokemon = MAGBY,10
+Pokemon = ELEKID, 10
+Pokemon = TYROGUE, 10
+Pokemon = PIKACHU, 10
