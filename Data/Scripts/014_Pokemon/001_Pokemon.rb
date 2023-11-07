@@ -1212,9 +1212,7 @@ class Pokemon
         type_keys = GameData::Type.keys
         current_types = self.types
         # Don't anomalize into a type you are
-        echoln "current_types = #{current_types} and type_keys = #{type_keys}"
         type_keys = type_keys - current_types
-        echoln "type_keys after math #{type_keys}"
         type_id = type_keys.sample
         current_types[rand(current_types.size - 1)] = type_id
         @anomalyTypes = current_types
