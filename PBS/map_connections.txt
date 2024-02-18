@@ -44,3 +44,5 @@
 69,North,0,66,South,10
 # Route 4 Upper (86) - Route 4 Lower (85)
 86,South,65,85,North,0
+# Spooky Woods Upper (89) - Spooky Woods (88)
+89,South,0,88,North,9
