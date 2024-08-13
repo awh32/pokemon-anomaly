@@ -46,3 +46,5 @@
 86,South,65,85,North,0
 # Spooky Woods Upper (89) - Spooky Woods (88)
 89,South,0,88,North,9
+# Power Plant (103) - Route 7 (102)
+103,North,0,102,South,23
