@@ -48,3 +48,5 @@
 89,South,0,88,North,9
 # Power Plant (103) - Route 7 (102)
 103,North,0,102,South,23
+# Route 8 (104) - Route 7 (102)
+104,South,0,102,North,37
