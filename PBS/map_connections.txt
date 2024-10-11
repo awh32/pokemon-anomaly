@@ -50,3 +50,5 @@
 103,North,0,102,South,23
 # Route 8 (104) - Route 7 (102)
 104,South,0,102,North,37
+# Route 9 (107) - Zaffre Outpost (106)
+107,South,0,106,North,8
