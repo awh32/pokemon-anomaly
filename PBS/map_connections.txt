@@ -52,3 +52,5 @@
 104,South,0,102,North,37
 # Route 9 (107) - Zaffre Outpost (106)
 107,South,0,106,North,8
+# Route 9 West (108) - Route 9 (107)
+108,East,2,107,West,0
