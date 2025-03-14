@@ -71,3 +71,11 @@ EventHandlers.add(:on_wild_pokemon_created, :level_depends_on_party,
 #     end
 #   }
 # )
+
+# In the event a wild pokemon is flagged as an anomaly already, anomalize it.
+# TODO: need to make sure this doesn't cause duplicate rolls
+EventHandlers.add(:on_wild_pokemon_created, :pokemon_is_anomaly,
+proc { |pkmn|
+  pkmn.anomalize if pkmn.isAnomaly?
+  pkmn.calc_stats
+})

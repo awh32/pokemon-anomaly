@@ -1,0 +1,64 @@
+
+=================
+
+[2025-03-14 16:10:48 -0400]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Error in Plugin: [v21.1 Hotfixes]
+Exception: NameError
+Message: undefined method `pbCheckEventTriggerAfterTurning' for class `Game_Event'
+
+Backtrace:
+[v21.1 Hotfixes] Misc bug fixes.rb:558:in `<class:Game_Event>'
+[v21.1 Hotfixes] Misc bug fixes.rb:545:in `<main>'
+005_PluginManager.rb:635:in `eval'
+005_PluginManager.rb:635:in `block (2 levels) in runPlugins'
+005_PluginManager.rb:625:in `each'
+005_PluginManager.rb:625:in `block in runPlugins'
+005_PluginManager.rb:616:in `each'
+005_PluginManager.rb:616:in `runPlugins'
+999_Main.rb:34:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+
+=================
+
+[2025-03-14 16:11:32 -0400]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Error in Plugin: [v21.1 Hotfixes]
+Exception: NameError
+Message: undefined method `pbCheckEventTriggerAfterTurning' for class `Game_Event'
+
+Backtrace:
+[v21.1 Hotfixes] Misc bug fixes.rb:558:in `<class:Game_Event>'
+[v21.1 Hotfixes] Misc bug fixes.rb:545:in `<main>'
+005_PluginManager.rb:635:in `eval'
+005_PluginManager.rb:635:in `block (2 levels) in runPlugins'
+005_PluginManager.rb:625:in `each'
+005_PluginManager.rb:625:in `block in runPlugins'
+005_PluginManager.rb:616:in `each'
+005_PluginManager.rb:616:in `runPlugins'
+999_Main.rb:34:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+
+=================
+
+[2025-03-14 16:31:28 -0400]
+[Pokémon Essentials version 21.1]
+
+Exception: NoMethodError
+Message: undefined method `isAnomaly' for #<Pokemon SANDSHREW Lv.13>
+
+Backtrace:
+004_Overworld_EncounterModifiers.rb:79:in `block (2 levels) in load_scripts_from_folder'
+005_Event_Handlers.rb:89:in `block in trigger'
+005_Event_Handlers.rb:89:in `each_value'
+005_Event_Handlers.rb:89:in `trigger'
+006_Event_HandlerCollections.rb:63:in `trigger'
+003_Overworld_WildEncounters.rb:447:in `pbGenerateWildPokemon'
+001_Overworld_BattleStarting.rb:422:in `block in generate_foes'
+001_Overworld_BattleStarting.rb:414:in `each'
+001_Overworld_BattleStarting.rb:414:in `generate_foes'
+001_Overworld_BattleStarting.rb:357:in `start'

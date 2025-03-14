@@ -309,3 +309,8 @@ Land,21
     10,PIKACHU,11,14
     10,SANDSHREW_1,11,14
     10,VULPIX_1,11,14
+#-------------------------------
+[113] # Test Map
+Land,21
+    50,SANDSHREW_1,11,14
+    50,VULPIX_1,11,14

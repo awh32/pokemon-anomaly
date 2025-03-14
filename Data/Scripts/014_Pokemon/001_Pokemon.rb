@@ -1231,6 +1231,9 @@ class Pokemon
     else 
       _INTL("Tried to anomalize a non-anomaly pokemon.")
     end
+
+    # Calc stats to be safe
+    calc_stats
   end
 
   # Return an anomaly pokemon to normal
@@ -1242,6 +1245,8 @@ class Pokemon
     @anomalyRolls = nil
     # Should just be able to nil this and it will get repopulated from ability index
     @ability = nil
+    # Calc stats to be safe
+    calc_stats
   end
 
   #=============================================================================
