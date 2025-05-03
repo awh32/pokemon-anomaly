@@ -79,3 +79,13 @@ proc { |pkmn|
   pkmn.anomalize if pkmn.isAnomaly?
   pkmn.calc_stats
 })
+
+# Overwrite the dummy wild pokemon value to be the species stored in a game variable.
+# We are using charizard for this since it will never be encountered in the wild
+EventHandlers.add(:on_wild_pokemon_created, :pokemon_should_swap,
+proc { |pkmn|
+  echoln ("old #{pkmn.species}")
+  pkmn.species= :PIKACHU if pkmn.species == :CHARIZARD
+  echoln ("new #{pkmn.species}")
+  pkmn.calc_stats
+})

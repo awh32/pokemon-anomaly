@@ -313,4 +313,4 @@ Land,21
 [113] # Test Map
 Land,21
     50,SANDSHREW_1,11,14
-    50,VULPIX_1,11,14
+    50,CHARIZARD,11,16

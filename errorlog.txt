@@ -62,3 +62,67 @@ Backtrace:
 001_Overworld_BattleStarting.rb:414:in `each'
 001_Overworld_BattleStarting.rb:414:in `generate_foes'
 001_Overworld_BattleStarting.rb:357:in `start'
+
+=================
+
+[2025-05-03 14:52:51 -0400]
+[Pokémon Essentials version 21.1]
+
+Exception: RuntimeError
+Message: Undefined value DUMMY in GameData::Species.
+File PBS/encounters.txt, line 316
+50,DUMMY,11,15
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+001_Compiler.rb:430:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:679:in `block (2 levels) in compile_encounters'
+001_Compiler.rb:244:in `block (2 levels) in pbCompilerEachPreppedLine'
+001_Compiler.rb:236:in `each_line'
+
+=================
+
+[2025-05-03 14:53:07 -0400]
+[Pokémon Essentials version 21.1]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-05-03 15:51:38 -0400]
+[Pokémon Essentials version 21.1]
+
+Exception: NoMethodError
+Message: undefined method `species_id' for #<Pokemon CHARIZARD Lv.11>
+
+Backtrace:
+004_Overworld_EncounterModifiers.rb:87:in `block (2 levels) in load_scripts_from_folder'
+005_Event_Handlers.rb:89:in `block in trigger'
+005_Event_Handlers.rb:89:in `each_value'
+005_Event_Handlers.rb:89:in `trigger'
+006_Event_HandlerCollections.rb:63:in `trigger'
+003_Overworld_WildEncounters.rb:447:in `pbGenerateWildPokemon'
+001_Overworld_BattleStarting.rb:422:in `block in generate_foes'
+001_Overworld_BattleStarting.rb:414:in `each'
+001_Overworld_BattleStarting.rb:414:in `generate_foes'
+001_Overworld_BattleStarting.rb:357:in `start'
