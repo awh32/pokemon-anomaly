@@ -72,20 +72,13 @@ EventHandlers.add(:on_wild_pokemon_created, :level_depends_on_party,
 #   }
 # )
 
-# In the event a wild pokemon is flagged as an anomaly already, anomalize it.
-# TODO: need to make sure this doesn't cause duplicate rolls
-EventHandlers.add(:on_wild_pokemon_created, :pokemon_is_anomaly,
-proc { |pkmn|
-  pkmn.anomalize if pkmn.isAnomaly?
-  pkmn.calc_stats
-})
-
 # Overwrite the dummy wild pokemon value to be the species stored in a game variable.
 # We are using charizard for this since it will never be encountered in the wild
 EventHandlers.add(:on_wild_pokemon_created, :pokemon_should_swap,
-proc { |pkmn|
-  echoln ("old #{pkmn.species}")
+proc { |pkmn|  
   pkmn.species= :PIKACHU if pkmn.species == :CHARIZARD
-  echoln ("new #{pkmn.species}")
+  pkmn.reset_moves
+  pkmn.makeAnomaly
+  pkmn.anomalize
   pkmn.calc_stats
 })

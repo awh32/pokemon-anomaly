@@ -130,3 +130,10 @@ Pokemon = MAGBY,10
 Pokemon = ELEKID, 10
 Pokemon = TYROGUE, 10
 Pokemon = PIKACHU, 10
+#-------------------------------
+[BIKER,Test]
+LoseText = Nice!
+Pokemon = BULBASAUR, 5
+    Item = ORANBERRY
+    Types = FIRE, WATER
+    Anomaly = yes

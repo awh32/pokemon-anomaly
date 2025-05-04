@@ -310,34 +310,24 @@ class Battle
     when :Psychic
       pbDisplay(_INTL("The battlefield is weird!"))
     end
-    # Anomaly announcement
-    # TODO: probably an in engine way to grab this or iterate through opponents
-    opposingPokemon = @battlers.last.pokemon
-    isAnomaly = opposingPokemon.anomaly
-    if isAnomaly
-      #TODO: display anomaly animation
-      #Does the text need to be paused?
-      pbDisplayPaused(_INTL("Opposing {1} is an anomaly!", opposingPokemon.species))
-      #TODO: determine these bool dynamically
-      anomalyType = opposingPokemon.anomalyRolls["anomalyType"]
-      anomalyAbility = opposingPokemon.anomalyRolls["anomalyAbility"]
-      anomalyMove = opposingPokemon.anomalyRolls["anomalyMove"]
-      if anomalyType
-        pbDisplayPaused(_INTL("Opposing {1} has an anomalous type!", opposingPokemon.species))
-      end
-      if anomalyAbility
-        pbDisplayPaused(_INTL("Opposing {1} has an anomalous ability!", opposingPokemon.species))
-      end
-      if anomalyMove
-        pbDisplayPaused(_INTL("Opposing {1} has an anomalous move!", opposingPokemon.species))
-      end
-      #TODO: verify that change is permanent.
-    end
-
     # Abilities upon entering battle
     pbOnAllBattlersEnteringBattle
     # Main battle loop
     pbBattleLoop
+  end
+
+  #=============================================================================
+  # Anomaly Announcement
+  #=============================================================================
+  def pbAnomalyAnnoucnement
+     # Anomaly announcement
+    # TODO: probably an in engine way to grab this or iterate through opponents
+    opposingPokemon = @battlers.last.pokemon
+    if opposingPokemon.isAnomaly?
+      #TODO: display anomaly animation
+      #Does the text need to be paused?
+      pbDisplayPaused(_INTL("Opposing {1} is an anomaly!", opposingPokemon.species))      
+    end
   end
 
   #=============================================================================

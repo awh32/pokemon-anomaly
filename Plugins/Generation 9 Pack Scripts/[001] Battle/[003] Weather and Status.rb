@@ -94,6 +94,7 @@ class Battle
     terrain_data = GameData::BattleTerrain.try_get(@field.terrain)
     pbCommonAnimation(terrain_data.animation) if terrain_data
     pbTerrainStartMessage
+    pbAnomalyAnnoucnement
     pbOnAllBattlersEnteringBattle
     pbBattleLoop
   end

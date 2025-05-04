@@ -40,7 +40,9 @@ module GameData
       "SuperShiny"   => [:super_shininess, "b"],
       "Shadow"       => [:shadowness,      "b"],
       "Anomaly"      => [:anomaly,         "b"],
-      "Ball"         => [:poke_ball,       "e", :Item]
+      "Ball"         => [:poke_ball,       "e", :Item],
+      "Types"        => [:types,           "*e", :Type],
+      "Anomaly"      => [:anomaly,         "b"]
     }
 
     extend ClassMethodsSymbols
@@ -171,11 +173,18 @@ module GameData
         if pkmn_data[:shadowness]
           pkmn.makeShadow
           pkmn.shiny = false
-        end
+        end        
+        pkmn.poke_ball = pkmn_data[:poke_ball] if pkmn_data[:poke_ball]
         if pkmn_data[:anomaly]
           pkmn.makeAnomaly
-        end
-        pkmn.poke_ball = pkmn_data[:poke_ball] if pkmn_data[:poke_ball]
+          # TODO: not elegant.
+          # Case: pokemon changes form (mega), faints and then is revivived
+          # if we don't set this the ability gets reverted if anomaly
+          # if we do set this the ability gets overwritten if not anomaly]
+          # More often than not, any defined anomaly trainer is going to have an ability also
+          pkmn.anomalyAbility = pkmn_data[:ability] if pkmn_data[:ability]
+          pkmn.anomalyTypes = pkmn_data[:types] if pkmn_data[:types]
+        end        
         pkmn.calc_stats
       end
       return trainer
