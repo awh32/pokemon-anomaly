@@ -237,3 +237,27 @@ Backtrace:
 001_Overworld_BattleStarting.rb:521:in `start_core'
 001_Overworld_BattleStarting.rb:487:in `start'
 (eval):1:in `execute_script'
+
+=================
+
+[2025-05-24 13:33:15 -0400]
+[Pokémon Essentials version 21.1]
+
+Script error in event 2 (coords 16,7), map 113 (Test Mission Map)
+Exception: NoMethodError
+Message: undefined method `pbItemGet' for #<Interpreter @event_id: 2>
+
+***Full script:
+pbItemGet(:MASTERBALL)
+
+Backtrace:
+(eval):1:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:1177:in `command_355'
+004_Interpreter_Commands.rb:116:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+003_Interpreter.rb:86:in `update'
+002_Scene_Map.rb:167:in `block in update'
+002_Scene_Map.rb:166:in `loop'

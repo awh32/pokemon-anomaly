@@ -117,10 +117,23 @@ Pokemon = CHARIZARD,63
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
 #-------------------------------
+# OHPE REGION STARTS HERE
+#-------------------------------
 [RIVAL1,Nice Rival]
 LoseText = Huh? But I didn't see an anomaly...
-Pokemon = BULBASAUR,10
-    Item = ORANBERRY
+Pokemon = RATTATA,5
+#-------------------------------
+[RIVAL1,Nice Rival, 1]
+LoseText = Huh? But I didn't see an anomaly...
+Pokemon = SQUIRTLE,5
+#-------------------------------
+[RIVAL1,Nice Rival, 2]
+LoseText = Huh? But I didn't see an anomaly...
+Pokemon = CHIKORITA,5
+#-------------------------------
+[RIVAL1,Nice Rival, 3]
+LoseText = Huh? But I didn't see an anomaly...
+Pokemon = FUECOCO,5
 #-------------------------------
 [AROMALADY,Baby Gym]
 LoseText = Oh no, my babies!
