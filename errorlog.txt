@@ -261,3 +261,87 @@ Backtrace:
 003_Interpreter.rb:86:in `update'
 002_Scene_Map.rb:167:in `block in update'
 002_Scene_Map.rb:166:in `loop'
+
+=================
+
+[2025-06-08 11:04:24 -0400]
+[Pokémon Essentials version 21.1]
+
+Script error in event 9 (coords 20,6), map 32 (Verditer Town)
+Exception: NameError
+Message: undefined local variable or method `disablePokeBalls' for #<Interpreter @event_id: 9>
+
+***Full script:
+pkmn = Pokemon.new(:KECLEON, 5)
+pkmn.makeAnomaly
+pkmn.anomalize
+setBattleRule(disablePokeBalls)
+WildBattle.start(pkmn)
+
+Backtrace:
+(eval):4:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:1177:in `command_355'
+004_Interpreter_Commands.rb:116:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+003_Interpreter.rb:86:in `update'
+002_Scene_Map.rb:167:in `block in update'
+002_Scene_Map.rb:166:in `loop'
+
+=================
+
+[2025-06-08 11:25:24 -0400]
+[Pokémon Essentials version 21.1]
+
+Script error in event 9 (coords 20,7), map 32 (Verditer Town)
+Exception: NameError
+Message: uninitialized constant Pokemon::QMARKS
+
+***Full script:
+pkmn = Pokemon.new(:KECLEON, 5)
+pkmn.makeAnomaly
+pkmn.anomalize
+setBattleRule("disablePokeBalls")
+WildBattle.start(pkmn)
+
+Backtrace:
+001_Pokemon.rb:1217:in `anomalize'
+(eval):3:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:1177:in `command_355'
+004_Interpreter_Commands.rb:116:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+003_Interpreter.rb:86:in `update'
+002_Scene_Map.rb:167:in `block in update'
+
+=================
+
+[2025-06-08 11:31:17 -0400]
+[Pokémon Essentials version 21.1]
+
+Script error in event 9 (coords 20,7), map 32 (Verditer Town)
+Exception: TypeError
+Message: no implicit conversion of Symbol into Array
+
+***Full script:
+pkmn = Pokemon.new(:KECLEON, 5)
+pkmn.makeAnomaly
+pkmn.anomalize
+setBattleRule("disablePokeBalls")
+WildBattle.start(pkmn)
+
+Backtrace:
+001_Pokemon.rb:1217:in `-'
+001_Pokemon.rb:1217:in `anomalize'
+(eval):3:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:1177:in `command_355'
+004_Interpreter_Commands.rb:116:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+003_Interpreter.rb:86:in `update'

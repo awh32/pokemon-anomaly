@@ -1213,6 +1213,10 @@ class Pokemon
         current_types = self.types
         # Don't anomalize into a type you are
         type_keys = type_keys - current_types
+        # Don't anomalize into the ??? type
+        type_keys = type_keys - [:QMARKS]
+        # Don't anomalize into the Stellar type
+        type_keys = type_keys - [:STELLAR]
         type_id = type_keys.sample
         current_types[rand(current_types.size - 1)] = type_id
         @anomalyTypes = current_types
