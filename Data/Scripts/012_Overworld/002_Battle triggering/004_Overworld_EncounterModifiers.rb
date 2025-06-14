@@ -76,9 +76,11 @@ EventHandlers.add(:on_wild_pokemon_created, :level_depends_on_party,
 # We are using charizard for this since it will never be encountered in the wild
 EventHandlers.add(:on_wild_pokemon_created, :pokemon_should_swap,
 proc { |pkmn|  
-  pkmn.species= :PIKACHU if pkmn.species == :CHARIZARD
-  pkmn.reset_moves
-  pkmn.makeAnomaly
-  pkmn.anomalize
-  pkmn.calc_stats
+  if pkmn.species == :CHARIZARD
+    pkmn.species= :PIKACHU
+    pkmn.reset_moves
+    pkmn.makeAnomaly
+    pkmn.anomalize
+    pkmn.calc_stats
+  end
 })

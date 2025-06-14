@@ -117,21 +117,19 @@ Pokemon = CHARIZARD,63
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
 #-------------------------------
-# OHPE REGION STARTS HERE
-#-------------------------------
 [RIVAL1,Nice Rival]
 LoseText = Huh? But I didn't see an anomaly...
 Pokemon = RATTATA,5
 #-------------------------------
-[RIVAL1,Nice Rival, 1]
+[RIVAL1,Nice Rival,1]
 LoseText = Huh? But I didn't see an anomaly...
 Pokemon = SQUIRTLE,5
 #-------------------------------
-[RIVAL1,Nice Rival, 2]
+[RIVAL1,Nice Rival,2]
 LoseText = Huh? But I didn't see an anomaly...
 Pokemon = CHIKORITA,5
 #-------------------------------
-[RIVAL1,Nice Rival, 3]
+[RIVAL1,Nice Rival,3]
 LoseText = Huh? But I didn't see an anomaly...
 Pokemon = FUECOCO,5
 #-------------------------------
@@ -140,13 +138,31 @@ LoseText = Oh no, my babies!
 Pokemon = CLEFFA,10
 Pokemon = TOGEPI,10
 Pokemon = MAGBY,10
-Pokemon = ELEKID, 10
-Pokemon = TYROGUE, 10
-Pokemon = PIKACHU, 10
+Pokemon = ELEKID,10
+Pokemon = TYROGUE,10
+Pokemon = PIKACHU,10
 #-------------------------------
 [BIKER,Test]
 LoseText = Nice!
-Pokemon = BULBASAUR, 5
+Pokemon = BULBASAUR,5
     Item = ORANBERRY
-    Types = FIRE, WATER
-    Anomaly = yes
+    Types = FIRE,WATER
+    Anomaly = true
+#-------------------------------
+[YOUNGSTER,James]
+LoseText = Wow, you're tough!
+Pokemon = SENTRET,2
+#-------------------------------
+[LASS,Trish]
+LoseText = Oh no, my Pokémon!
+Pokemon = MEOWTH,3
+#-------------------------------
+[CAMPER,Eli]
+LoseText = What? Not again!
+Pokemon = PIDGEY,3
+#-------------------------------
+[CRUSHGIRL,Delilah]
+LoseText = Wow! You're strong!
+Pokemon = POLIWAG,7
+Pokemon = POLIWHIRL, 8
+POKEMON = POLIWHIRL, 8

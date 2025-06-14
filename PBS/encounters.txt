@@ -314,3 +314,17 @@ Land,21
 Land,21
     50,SANDSHREW_1,11,14
     50,CHARIZARD,11,16
+#-------------------------------
+[033] # Route 1
+Land,21
+    40,PIKIPEK,2,3
+    40,SENTRET,2,3
+    20,MEOWTH,3,4
+Water, 2
+    100, POLIWAG, 5
+OldRod
+    100, POLIWAG, 5
+GoodRod
+    100, POLIWAG, 10
+SuperRod
+    100, POLIWAG, 30   
