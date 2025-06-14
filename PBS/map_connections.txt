@@ -54,5 +54,5 @@
 110,East,5,111,West,0
 # Route 10 east (111) - Route 10 NE (112)
 111,East,0,112,West,45
-# Route 1 (33) - Verditer Town (32)
-33,South,0,32,North,9
+# Verditer Town (32) - Route 1 (33)
+32,North,8,33,South,0
