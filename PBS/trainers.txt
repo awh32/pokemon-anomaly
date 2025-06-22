@@ -159,7 +159,7 @@ Pokemon = MEOWTH,3
 #-------------------------------
 [CAMPER,Eli]
 LoseText = What? Not again!
-Pokemon = PIKIPET,3
+Pokemon = PIKIPEK,3
 #-------------------------------
 [CRUSHGIRL,Delilah]
 LoseText = Wow! You're strong!

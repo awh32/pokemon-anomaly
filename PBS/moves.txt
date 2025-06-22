@@ -60,7 +60,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = HealAllyOrDamageFoe
 Flags = CanProtect,CanMirrorMove,Bomb
-Description = Fires an exploding pollen puff at enemies, or a HP-restoring one at allies.
+Description = Fires an exploding pollen puff at enemies, or an HP-restoring one at allies.
 #-------------------------------
 [LEECHLIFE]
 Name = Leech Life
