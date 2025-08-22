@@ -389,3 +389,26 @@ Backtrace:
 999_Main.rb:50:in `loop'
 999_Main.rb:50:in `block in load_scripts_from_folder'
 Main:35:in `eval'
+
+=================
+
+[2025-08-22 14:55:39 -0400]
+[Pokémon Essentials version 21.1]
+
+Script error in event 2 (coords 2,5), map 116 (Interior 3)
+Exception: NoMethodError
+Message: undefined method `randomInt' for Math:Module
+
+***Full script:
+pbGenerateEgg(pbDetermineRandomBaby())
+Backtrace:
+002_Utilities_Pokemon.rb:163:in `pbDetermineRandomBaby'
+(eval):1:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:434:in `command_111'
+004_Interpreter_Commands.rb:29:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+003_Interpreter.rb:86:in `update'
+002_Scene_Map.rb:167:in `block in update'

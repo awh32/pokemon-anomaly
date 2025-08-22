@@ -159,6 +159,52 @@ def pbAddForeignPokemon(pkmn, level = 1, owner_name = nil, nickname = nil, owner
   return true
 end
 
+def pbDetermineRandomBaby()
+  result = rand(19)
+  case result
+  when 0
+    return :PICHU
+  when 1
+    return :CLEFFA
+  when 2
+    return :IGGLYBUFF
+  when 3
+    return :TOGEPI
+  when 4
+    return :TYROGUE
+  when 5
+    return :SMOOCHUM
+  when 6
+    return :ELEKID
+  when 7
+    return :MAGBY
+  when 8
+    return :MANTYKE
+  when 9
+    return :HAPPINY
+  when 10
+    return :BUDEW
+  when 11
+    return :CHINGLING
+  when 12
+    return :BONSLY
+  when 13
+    return :AZURILL
+  when 14
+    return :WYNAUT
+  when 15
+    return :MIMEJR
+  when 16
+    return :MUNCHLAX
+  when 17
+    return :RIOLU
+  when 18
+    return :TOXEL
+  else
+    return :DITTO
+  end
+end
+
 def pbGenerateEgg(pkmn, text = "")
   return false if !pkmn || $player.party_full?
   pkmn = Pokemon.new(pkmn, Settings::EGG_LEVEL) if !pkmn.is_a?(Pokemon)
