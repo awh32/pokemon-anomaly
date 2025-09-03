@@ -327,4 +327,19 @@ OldRod
 GoodRod
     100, POLIWAG, 10
 SuperRod
-    100, POLIWAG, 30   
+    100, POLIWAG, 30
+#-------------------------------
+[081] # Route 1
+Land,21
+    40,SPINARAK,3,5
+    40,SENTRET,3,5
+    20,MEOWTH_1,3,6
+Water, 2
+    50, SURSKIT, 6
+    50, MAGIKARP, 6
+OldRod
+    100, MAGIKARP, 5
+GoodRod
+    100, GOLDEEN, 10
+SuperRod
+    100, SEAKING, 30    
