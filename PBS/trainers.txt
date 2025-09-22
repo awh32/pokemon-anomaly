@@ -166,3 +166,8 @@ LoseText = Wow! You're strong!
 Pokemon = POLIWAG,7
 Pokemon = POLIWHIRL, 8
 POKEMON = POLIWHIRL, 8
+#-------------------------------
+[CAMPER,Seth]
+LoseText = You sure showed me!
+Pokemon = SPINARAK,3
+Pokemon = MEOWTH_1, 5
