@@ -171,3 +171,9 @@ POKEMON = POLIWHIRL, 8
 LoseText = You sure showed me!
 Pokemon = SPINARAK,3
 Pokemon = MEOWTH_1, 5
+#-------------------------------
+[POKEMANIAC,Shaun]
+LoseText = Ah, wait, it's over?
+Pokemon = SENTRET,4
+Pokemon = SENTRET,4
+Pokemon = SPINARAK, 5
