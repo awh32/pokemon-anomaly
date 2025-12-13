@@ -177,3 +177,15 @@ LoseText = Ah, wait, it's over?
 Pokemon = SENTRET,4
 Pokemon = SENTRET,4
 Pokemon = SPINARAK, 5
+#-------------------------------
+[BUGCATCHER,Timmy]
+LoseText = My bug Pokémon!
+Pokemon = SPINARAK, 5
+Pokemon = SPINARAK, 5
+Pokemon = SPINARAK, 5
+#-------------------------------
+[LASS,Tammy]
+LoseText = My poor darlings!
+Pokemon = MEOWTH,4
+Pokemon = SENTRET,5
+Pokemon = PIKIPEK,5
