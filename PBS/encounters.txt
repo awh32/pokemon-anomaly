@@ -343,3 +343,17 @@ GoodRod
     100, CORPHISH, 10
 SuperRod
     100, CRAWDAUNT, 30    
+#-------------------------------
+[083] # Flash Cave
+Land,21
+    50,ZUBAT,8,11
+    25,SANDSHREW,8,11
+    25,GEODUDE_1,7,12
+Water, 2
+    50, CHINCHOU, 9,10
+OldRod
+    100, CHINCHOU, 6
+GoodRod
+    100, CHINCHOU, 10
+SuperRod
+    100, LANTURN, 30  
