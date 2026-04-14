@@ -189,3 +189,20 @@ LoseText = My poor darlings!
 Pokemon = MEOWTH,4
 Pokemon = SENTRET,5
 Pokemon = PIKIPEK,5
+#-------------------------------
+[BLACKBELT,Oscar]
+LoseText = Hi-yaaah!
+Pokemon = SNEASEL_1,7
+Pokemon = SCRAGGY,7
+Pokemon = FLAMIGO,8
+#-------------------------------
+[BIRDKEEPER,Keith]
+LoseText = Our wings were clipped!
+Pokemon = PIKIPEK,7
+Pokemon = TRUMBEAK,8
+#-------------------------------
+[SWIMMER_F,Janet]
+LoseText = Those waves were too strong!
+Pokemon = CHINCHOU,7
+Pokemon = MARILL,8
+Pokemon = BARBOACH,8
