@@ -206,3 +206,11 @@ LoseText = Those waves were too strong!
 Pokemon = CHINCHOU,7
 Pokemon = MARILL,8
 Pokemon = BARBOACH,8
+#-------------------------------
+[CRUSHGIRL,Lindsey]
+LoseText = Whoa, that was a lot!
+Pokemon = MUNCHLAX,8
+Pokemon = POLTCHAGEIST,8
+Pokemon = TOGEPI,8
+Pokemon = FIDOUGH,8
+Pokemon = JIGGLYPUFF,9

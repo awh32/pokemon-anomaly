@@ -345,7 +345,7 @@ SuperRod
     100, CRAWDAUNT, 30    
 #-------------------------------
 [083] # Flash Cave
-Land,21
+Cave,5
     50,ZUBAT,8,11
     25,SANDSHREW,8,11
     25,GEODUDE_1,7,12

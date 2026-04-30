@@ -430,3 +430,25 @@ Message: (eval):1: unterminated string meets end of file
 
 ***Full script:
 TrainerBattle.start(:CAMPER, "Seth)
+=================
+
+[2026-04-30 15:33:39 -0400]
+[Pokémon Essentials version 21.1]
+
+Script error in event 15 (coords 15,31), map 83 (Flash Cave)
+Exception: RuntimeError
+Message: Trainer for data 'CRUSHGIRL, Lady Assassin Lindsey' is not defined.
+
+***Full script:
+TrainerBattle.start(:CRUSHGIRL, "Lady Assassin Lindsey")
+Backtrace:
+001_Overworld_BattleStarting.rb:584:in `block in generate_foes'
+001_Overworld_BattleStarting.rb:538:in `each'
+001_Overworld_BattleStarting.rb:538:in `each_with_index'
+001_Overworld_BattleStarting.rb:538:in `generate_foes'
+001_Overworld_BattleStarting.rb:504:in `start_core'
+001_Overworld_BattleStarting.rb:487:in `start'
+(eval):1:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:434:in `command_111'
