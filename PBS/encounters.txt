@@ -332,7 +332,7 @@ SuperRod
 [081] # Route 2
 Land,21
     40,SPINARAK,3,5
-    40,SENTRET,3,5
+    40,ZIGZAGOON_1,3,5
     20,MEOWTH_1,3,6
 Water, 2
     50, SURSKIT, 6
@@ -357,3 +357,10 @@ GoodRod
     100, CHINCHOU, 10
 SuperRod
     100, LANTURN, 30  
+#-------------------------------
+[082] # Route 3
+Land,21
+    25,SANDSHREW,9,10
+    25,PINECO,9,10
+    30,ZIGZAGOON_1,9,10
+    20,ROCKRUFF,11,12
