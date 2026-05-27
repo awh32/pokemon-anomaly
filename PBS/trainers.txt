@@ -214,3 +214,11 @@ Pokemon = POLTCHAGEIST,8
 Pokemon = TOGEPI,8
 Pokemon = FIDOUGH,8
 Pokemon = JIGGLYPUFF,9
+#-------------------------------
+[BEAUTY,Mia]
+LoseText = Oh no!
+Pokemon = SPHEAL,8
+Pokemon = SURSKIT,8
+Pokemon = SKITTY,8
+Pokemon = PACHIRISU,9
+
