@@ -221,4 +221,26 @@ Pokemon = SPHEAL,8
 Pokemon = SURSKIT,8
 Pokemon = SKITTY,8
 Pokemon = PACHIRISU,9
+#-------------------------------
+[PSYCHIC_F,Robin]
+LoseText = The future is not so clear after all...
+Pokemon = DROWZEE,8
+Pokemon = GIRAFARIG,11
+Pokemon = RALTS,9
+#-------------------------------
+[HIKER,Patrick]
+LoseText = Rolled out!
+Pokemon = GEODUDE_1,8
+    Moves = ROLLOUT, DEFENSECURL, TACKLE, SPARK 
+Pokemon = SANDSHREW,8
+    Moves = ROLLOUT, DEFENSECURL, POISONSTING, SCRATCH 
+Pokemon = GEODUDE_1,9
+    Moves = ROLLOUT, DEFENSECURL, TACKLE, SPARK 
+#-------------------------------
+[SUPERNERD,Jacob]
+LoseText = Ooh, I was so close!
+Pokemon = PINECO,8
+Pokemon = ROCKRUFF,11
+Pokemon = JOLTIK,9
+Pokemon = KECLEON,10
 
